@@ -1,4 +1,5 @@
-const url = 'http://localhost/bloodaidphp-api' // this is for php api
+// const url = 'http://localhost/bloodaidphp-api'
+const url = 'https://bloodaid-py-api.onrender.com/' // this is for py render api
 
 // const url = 'http://localhost:5000' // this is for py api
 function shownavigation() {
