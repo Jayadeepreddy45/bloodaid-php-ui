@@ -255,7 +255,7 @@ function loadloginForm() {
     console.log(Data);
 
     $.ajax({
-      url: url + "/login.php", // API endpoint
+      url: url + "/login", // API endpoint
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -330,7 +330,7 @@ function loadDonorForm() {
     const userId = parsedData.user_id;
 
     $.ajax({
-      url: url + `/donor_form/${userId}`, // API endpoint
+      url:  `${url}/donor_form/${userId}`, // API endpoint
       type: "POST",
       dataType: "json",
       contentType: "application/json",
@@ -346,7 +346,7 @@ function loadDonorForm() {
       error: function (error) {
         console.error("Error:", error);
         const elem = `  <div class="alert alert-success" role="alert">
-            Donation submitted successfully!
+            Donation request failed!
           </div>`;
         $("#donor_form").append();
       },
@@ -446,7 +446,7 @@ function loadViewRequests() {
 `);
 
   $.ajax({
-    url: `http://localhost:5000/view_requests/${userId}`,
+    url: `${url}/view_requests/${userId}`,
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -463,7 +463,7 @@ function loadViewRequests() {
     },
     error: function (error) {
       console.error("Error fetching requests:", error);
-      alert("Failed to fetch requests.");
+     
     },
   });
 }
@@ -500,7 +500,7 @@ function loadViewDonations() {
 
   // Make AJAX request to fetch donations for the logged-in user
   $.ajax({
-    url:  url + `/view_donations/${userId}`, // Using dynamic user_id
+    url:   `${url}/view_donations/${userId}`, // Using dynamic user_id
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -537,7 +537,7 @@ function loadViewStock() {
 
   // to fetch bloodstock data
   $.ajax({
-    url:  url + "/blood_stock.php", // Endpoint to fetch blood stock data
+    url:  url + "/blood_stock", // Endpoint to fetch blood stock data
     method: "GET",
     success: function (data) {
       let container = $("#blood-stock-container");
@@ -586,7 +586,7 @@ function loadDonorHistory() {
 `);
 
   $.ajax({
-    url:  url + "/donation_history.php",
+    url:  url + "/donor_history",
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -629,7 +629,7 @@ function loadPatientHistory() {
 `);
 
   $.ajax({
-    url:  url + "/patient_history.php",
+    url:  url + "/patient_history",
     type: "GET",
     dataType: "json",
     success: function (response) {
@@ -675,7 +675,7 @@ function loadDonorRequests() {
   `);
 
   $.ajax({
-    url:  url + "/donation_requests.php",
+    url:  url + "/donation_requests",
     type: "GET",
     headers: { accept: "application/json" },
     success: function (response) {
@@ -713,7 +713,7 @@ function loadDonorRequests() {
         };
 
         $.ajax({
-          url:  url + `/update_donation_request/${donationId}`,
+          url:  `${url}/update_donation_request${donationId}`,
           type: "PUT",
           contentType: "application/json",
           dataType: "json",
@@ -795,7 +795,7 @@ function loadPatientRequests() {
         };
 
         $.ajax({
-          url:  url + `/update_patient_request/${requestId}`,
+          url: `${url}/update_patient_request/${requestId}`,
           type: "PUT",
           contentType: "application/json",
           dataType: "json",
