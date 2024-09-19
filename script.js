@@ -713,7 +713,7 @@ function loadDonorRequests() {
         };
 
         $.ajax({
-          url: `http://localhost:5000//update_donation_request/${donationId}`,
+          url:  url + `/update_donation_request/${donationId}`,
           type: "PUT",
           contentType: "application/json",
           dataType: "json",
