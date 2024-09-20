@@ -1,7 +1,9 @@
 // const url = 'http://localhost/bloodaidphp-api'
-const url = 'https://bloodaid-py-api.onrender.com/' // this is for py render api
+// const url = 'https://bloodaid-py-api.onrender.com/' // this is for py render api
 
 // const url = 'http://localhost:5000' // this is for py api
+
+ const url = 'http://localhost:3000' // this is for nodejs api
 function shownavigation() {
   let loggedin = false;
   let role_id = -1;
