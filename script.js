@@ -435,7 +435,7 @@ function loadViewRequests() {
 
   $("#main_content").html(`
     <h3 style="text-align:center;">View Blood Requests</h3>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>User Id</th>                
@@ -489,7 +489,7 @@ function loadViewDonations() {
 
   $("#main_content").html(`
     <h3 style="text-align:center;">View Blood Donations</h3>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>User ID</th>
@@ -574,7 +574,7 @@ function loadViewStock() {
 function loadDonorHistory() {
   $("#main_content").html(`
     <h3 style="text-align:center;">Admin Donor History</h3>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Donation Id</th>
@@ -617,7 +617,7 @@ function loadDonorHistory() {
 function loadPatientHistory() {
   $("#main_content").html(`
     <h3 style="text-align:center;">Admin Patient History</h3>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Request Id</th>
@@ -661,7 +661,7 @@ function loadPatientHistory() {
 function loadDonorRequests() {
   $("#main_content").html(`
     <h1>Admin Donor Requests</h1>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
       <thead>
         <tr>
           <th>Donor ID</th>
@@ -743,7 +743,7 @@ function loadDonorRequests() {
 function loadPatientRequests() {
   $("#main_content").html(`
     <h1>Admin Patient Requests</h1>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered">
       <thead>
         <tr>
           <th>Patient ID</th>
