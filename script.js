@@ -1,10 +1,10 @@
 // const url = 'http://localhost/bloodaidphp-api'
- const url = 'https://bloodaid-py-api.onrender.com/' // this is for py render api
+//  const url = 'https://bloodaid-py-api.onrender.com/' // this is for py render api
 
 // const url = 'http://localhost:5000' // this is for py api
-// const url = 'http://localhost:3000' // this is for nodejs api
+ const url = 'http://localhost:3000' // this is for nodejs api
 
-//  const url = 'https://bloodaid-nodejs-api.onrender.com' // this is for  render nodejs api
+  // const url = 'https://bloodaid-nodejs-api.onrender.com' // this is for  render nodejs api
 function shownavigation() {
   let loggedin = false;
   let role_id = -1;
@@ -553,8 +553,8 @@ function loadViewRequests() {
 
   $("#main_content").html(`
     <h3 style="text-align:center;">View Blood Requests</h3>
-    <table class="table table-striped table-bordered >
-        <thead class="table-dark">
+    <table class="table" >
+        <thead class="table-dark" >
             <tr>
                 <th>User Id</th>                
                 <th>Units</th>                
@@ -959,13 +959,6 @@ $(document).ready(function () {
   $("#register_form_link").on("click", loadregisterForm);
   $("#redirect_register").on("click", loadregisterForm);
   $("#logout").on("click", loadcarousel);
-
-
-
-
-
-
-
 
   shownavigation();
 
